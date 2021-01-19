@@ -1,9 +1,9 @@
-package Éè±¸¹ÜÀí;
+package è®¾å¤‡ç®¡ç†;
 import java.sql.*;
 
 public class lode {
   public static void main(String args[]) throws SQLException{
-	  new Ö÷½çÃæ();
+	  new ä¸»ç•Œé¢();
 
   }
 }

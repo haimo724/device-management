@@ -1,4 +1,4 @@
-package Éè±¸¹ÜÀí;
+package è®¾å¤‡ç®¡ç†;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -16,20 +16,20 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 
 import javax.swing.*;
-public class Ö÷½çÃæ  extends JFrame{
+public class ä¸»ç•Œé¢  extends JFrame{
     Connection con;
  	Statement aql;
  	ResultSet rs;
  	String  s;
-	Font f= new Font("¿¬Ìå", Font.PLAIN, 24);
-	Font f1= new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 13);
-	Font f2= new Font("ºÚÌå", Font.PLAIN, 14);
-	JButton button1=new JButton("Éè±¸²éÑ¯");
-	JButton button2=new JButton("ÀàĞÍ¹ÜÀí");
-	JButton button3=new JButton("±¨Ëğ¼ÇÂ¼");
-	JButton button4=new JButton("Î¬ĞŞ¼ÇÂ¼");
-	JButton button5=new JButton("±¨ĞŞ²éÑ¯");
-	JLabel label=new JLabel("ÊµÑéÖĞĞÄÉè±¸¹ÜÀíÏµÍ³");
+	Font f= new Font("æ¥·ä½“", Font.PLAIN, 24);
+	Font f1= new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 13);
+	Font f2= new Font("é»‘ä½“", Font.PLAIN, 14);
+	JButton button1=new JButton("è®¾å¤‡æŸ¥è¯¢");
+	JButton button2=new JButton("ç±»å‹ç®¡ç†");
+	JButton button3=new JButton("æŠ¥æŸè®°å½•");
+	JButton button4=new JButton("ç»´ä¿®è®°å½•");
+	JButton button5=new JButton("æŠ¥ä¿®æŸ¥è¯¢");
+	JLabel label=new JLabel("å®éªŒä¸­å¿ƒè®¾å¤‡ç®¡ç†ç³»ç»Ÿ");
 	JPanel northPanel=new JPanel(); 
 	JPanel northPanel2=new JPanel(); 
 	JPanel northPanel1=new JPanel(); 
@@ -42,67 +42,67 @@ public class Ö÷½çÃæ  extends JFrame{
 	JPanel la=new JPanel();
 	JPanel la1=new JPanel();
 	JPanel la2=new JPanel();
-	JLabel label1=new JLabel("Éè±¸±àºÅ£º");
-	JLabel label2=new JLabel("Éè±¸Ãû³Æ£º");
-	JLabel label3=new JLabel("Éè±¸ÀàĞÍ£º");
+	JLabel label1=new JLabel("è®¾å¤‡ç¼–å·ï¼š");
+	JLabel label2=new JLabel("è®¾å¤‡åç§°ï¼š");
+	JLabel label3=new JLabel("è®¾å¤‡ç±»å‹ï¼š");
 	JTextField text1=new JTextField(10);
 	JTextField text2=new JTextField(10);
 	JTextField text3=new JTextField(10);
 	JTextArea area=new JTextArea(17,46);
 	JScrollPane js=new JScrollPane(area);
-	JButton  ²éÑ¯=new JButton("²éÑ¯Éè±¸");
-	JButton Ìí¼Ó=new JButton("Ìí¼ÓÉè±¸");
-	//JButton É¾³ı=new JButton("É¾³ıÉè±¸");
+	JButton  æŸ¥è¯¢=new JButton("æŸ¥è¯¢è®¾å¤‡");
+	JButton æ·»åŠ =new JButton("æ·»åŠ è®¾å¤‡");
+	//JButton åˆ é™¤=new JButton("åˆ é™¤è®¾å¤‡");
 	JLabel label0=new JLabel("                  ");
     CardLayout card=new CardLayout();
-    JLabel label4=new JLabel("Éè±¸ÀàĞÍ£º");
-    JLabel label5=new JLabel("   ¹ÜÀíÈË£º");
-    JLabel labe1=new JLabel("Éè±¸ÊıÁ¿£º");
-    JLabel labe2=new JLabel("Éè±¸×Ü¼Û£º");
-    JLabel label6=new JLabel("ÀàĞÍËµÃ÷£º");
+    JLabel label4=new JLabel("è®¾å¤‡ç±»å‹ï¼š");
+    JLabel label5=new JLabel("   ç®¡ç†äººï¼š");
+    JLabel labe1=new JLabel("è®¾å¤‡æ•°é‡ï¼š");
+    JLabel labe2=new JLabel("è®¾å¤‡æ€»ä»·ï¼š");
+    JLabel label6=new JLabel("ç±»å‹è¯´æ˜ï¼š");
     JTextField text4=new JTextField(23);
     JTextField text5=new JTextField(23);
     JTextField t1=new JTextField(23);
     JTextField t2=new JTextField(23);
     JTextArea area2=new JTextArea(5,23);
     JScrollPane js2=new JScrollPane(area2);
-    JButton ÀàĞÍÌí¼Ó=new JButton("Ìí¼ÓÀàĞÍ");
-    JButton ÀàĞÍ²éÑ¯=new JButton("²éÑ¯ÀàĞÍ");
-    JLabel label7=new JLabel("Éè±¸±àºÅ£º");
-    JLabel label8=new JLabel("  ¸ºÔğÈË£º");
-    JLabel label9=new JLabel("±¨ËğÈÕÆÚ£º");
+    JButton ç±»å‹æ·»åŠ =new JButton("æ·»åŠ ç±»å‹");
+    JButton ç±»å‹æŸ¥è¯¢=new JButton("æŸ¥è¯¢ç±»å‹");
+    JLabel label7=new JLabel("è®¾å¤‡ç¼–å·ï¼š");
+    JLabel label8=new JLabel("  è´Ÿè´£äººï¼š");
+    JLabel label9=new JLabel("æŠ¥æŸæ—¥æœŸï¼š");
     JTextField text7=new JTextField(23);
     JTextField text8=new JTextField(23);
     JTextField text9=new JTextField(23);
-    JButton ±¨Ëğ¼ÇÂ¼=new JButton("Ìá½»¼ÇÂ¼");
-    JLabel label10=new JLabel("Éè±¸±àºÅ£º");
-    JLabel label11=new JLabel("  Î¬ĞŞÈË£º");
-    JLabel label12=new JLabel("Î¬ĞŞÈÕÆÚ£º");
+    JButton æŠ¥æŸè®°å½•=new JButton("æäº¤è®°å½•");
+    JLabel label10=new JLabel("è®¾å¤‡ç¼–å·ï¼š");
+    JLabel label11=new JLabel("  ç»´ä¿®äººï¼š");
+    JLabel label12=new JLabel("ç»´ä¿®æ—¥æœŸï¼š");
     JTextField text10=new JTextField(23);
     JTextField text11=new JTextField(23);
     JTextField text12=new JTextField(23);
-    JButton Î¬ĞŞ¼ÇÂ¼=new JButton("Ìá½»¼ÇÂ¼");
-    JButton ²éÑ¯±¨Ëğ=new JButton("±¨Ëğ±í²éÑ¯");
-    JButton ²éÑ¯Î¬ĞŞ=new JButton("Î¬ĞŞ±í²éÑ¯");
+    JButton ç»´ä¿®è®°å½•=new JButton("æäº¤è®°å½•");
+    JButton æŸ¥è¯¢æŠ¥æŸ=new JButton("æŠ¥æŸè¡¨æŸ¥è¯¢");
+    JButton æŸ¥è¯¢ç»´ä¿®=new JButton("ç»´ä¿®è¡¨æŸ¥è¯¢");
     JTextArea area3=new JTextArea(13,36);
     JScrollPane js3=new JScrollPane(area3);
     
     
-    public Ö÷½çÃæ() throws SQLException{
+    public ä¸»ç•Œé¢() throws SQLException{
        init();	
-	   con=DriverManager.getConnection("jdbc:sqlserver://172.19.158.47;databaseName=Éè±¸¹ÜÀíÏµÍ³;"
+	   con=DriverManager.getConnection("jdbc:sqlserver://172.19.158.47;databaseName=è®¾å¤‡ç®¡ç†ç³»ç»Ÿ;"
 	   		 + "user=Lily;password=000000");
 	   aql=con.createStatement();
        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
     public void init(){
-    	this.setTitle("ÊµÑéÖĞĞÄÉè±¸¹ÜÀíÏµÍ³");
+    	this.setTitle("å®éªŒä¸­å¿ƒè®¾å¤‡ç®¡ç†ç³»ç»Ÿ");
     	this.setBounds(410, 130, 600, 500);
     	this.setLayout(new BorderLayout(10,10));
     	text1.setText("");
     	text2.setText("");
     	text3.setText("");
-    	area.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 13));
+    	area.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 13));
     	label.setFont(f);
     	label.setForeground(Color.RED);
     	button1.setFont(f1);
@@ -125,8 +125,8 @@ public class Ö÷½çÃæ  extends JFrame{
     	label2.setFont(f2);
     	label3.setFont(f2);
     	area.setEditable(false);
-    	Ìí¼Ó.setFont(new Font("ºÚÌå", Font.PLAIN, 15));
-    	²éÑ¯.setFont(new Font("ºÚÌå", Font.PLAIN, 15));
+    	æ·»åŠ .setFont(new Font("é»‘ä½“", Font.PLAIN, 15));
+    	æŸ¥è¯¢.setFont(new Font("é»‘ä½“", Font.PLAIN, 15));
     	lan1.add(label1);
     	lan1.add(text1);
     	lan1.add(label2);
@@ -134,20 +134,20 @@ public class Ö÷½çÃæ  extends JFrame{
     	lan1.add(label3);
     	lan1.add(text3);
     	lan1.add(js);
-    	lan1.add(²éÑ¯);
+    	lan1.add(æŸ¥è¯¢);
     	lan1.add(label0);
-    	lan1.add(Ìí¼Ó);
+    	lan1.add(æ·»åŠ );
     	
-    	label4.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 21));
-    	label5.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 21));
-    	labe1.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 21));
-    	labe2.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 21));
-    	label6.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 21));
-    	text4.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 18));
-    	text5.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 18));
-    	t1.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 18));
-    	t2.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 18));
-    	area2.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 18));
+    	label4.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 21));
+    	label5.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 21));
+    	labe1.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 21));
+    	labe2.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 21));
+    	label6.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 21));
+    	text4.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 18));
+    	text5.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 18));
+    	t1.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 18));
+    	t2.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 18));
+    	area2.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 18));
     	t1.setEditable(false);
     	t2.setEditable(false);
     	//t2.setEnabled(false);
@@ -161,26 +161,26 @@ public class Ö÷½çÃæ  extends JFrame{
     	la.add(t2);
     	la.add(label6);
     	la.add(js2);
-    	ÀàĞÍ²éÑ¯.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 18));
-    	ÀàĞÍÌí¼Ó.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 18));
+    	ç±»å‹æŸ¥è¯¢.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 18));
+    	ç±»å‹æ·»åŠ .setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 18));
     	JLabel li=new JLabel("                     ");
     	JLabel li2=new JLabel("                     ");
-    	la.add(ÀàĞÍ²éÑ¯);
+    	la.add(ç±»å‹æŸ¥è¯¢);
     	la.add(li);
-    	la.add(ÀàĞÍÌí¼Ó);
+    	la.add(ç±»å‹æ·»åŠ );
     	lan2.setLayout(new BorderLayout(10,10));
-    	li2.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 16));
+    	li2.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 16));
     	la1.add(li2);
     	lan2.add(la1,BorderLayout.NORTH);
     	lan2.add(la,BorderLayout.CENTER);
     	
-    	label7.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 21));
-    	label8.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 21));
-    	label9.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 21));
-    	text7.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 19));
-    	text8.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 19));
-    	text9.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 19));
-    	±¨Ëğ¼ÇÂ¼.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 18));
+    	label7.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 21));
+    	label8.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 21));
+    	label9.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 21));
+    	text7.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 19));
+    	text8.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 19));
+    	text9.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 19));
+    	æŠ¥æŸè®°å½•.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 18));
     	Box basebox,box1,box2;
     	box1=Box.createVerticalBox();
     	box1.add(label7);
@@ -196,28 +196,28 @@ public class Ö÷½çÃæ  extends JFrame{
     	box2.add(Box.createVerticalStrut(21));
     	box2.add(text9);
     	box2.add(Box.createVerticalStrut(21));
-    	box2.add(±¨Ëğ¼ÇÂ¼);
+    	box2.add(æŠ¥æŸè®°å½•);
     	basebox=Box.createHorizontalBox();
     	basebox.add(box1);
     	basebox.add(Box.createHorizontalStrut(10));
     	basebox.add(box2);
     	la2.add(basebox);
-    	la2.add(±¨Ëğ¼ÇÂ¼);
+    	la2.add(æŠ¥æŸè®°å½•);
     	lan3.setLayout(new BorderLayout(10,10));
     	JPanel op=new JPanel();
     	JLabel op1=new JLabel("                 ");
-    	op1.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 24));
+    	op1.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 24));
     	op.add(op1);
     	lan3.add(op,BorderLayout.NORTH);
     	lan3.add(la2,BorderLayout.CENTER);
     	
-    	label10.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 21));
-    	label11.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 21));
-    	label12.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 21));
-    	text10.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 19));
-    	text11.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 19));
-    	text12.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 19));
-    	Î¬ĞŞ¼ÇÂ¼.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 18));
+    	label10.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 21));
+    	label11.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 21));
+    	label12.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 21));
+    	text10.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 19));
+    	text11.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 19));
+    	text12.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 19));
+    	ç»´ä¿®è®°å½•.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 18));
     	Box basebox1,box3,box4;
     	box3=Box.createVerticalBox();
     	box3.add(label10);
@@ -233,37 +233,37 @@ public class Ö÷½çÃæ  extends JFrame{
     	box4.add(Box.createVerticalStrut(21));
     	box4.add(text12);
     	box4.add(Box.createVerticalStrut(21));
-    	box4.add(Î¬ĞŞ¼ÇÂ¼);
+    	box4.add(ç»´ä¿®è®°å½•);
     	basebox1=Box.createHorizontalBox();
     	basebox1.add(box3);
     	basebox1.add(Box.createHorizontalStrut(10));
     	basebox1.add(box4);
     	JPanel la3=new JPanel();
     	la3.add(basebox1);
-    	la3.add(Î¬ĞŞ¼ÇÂ¼);
+    	la3.add(ç»´ä¿®è®°å½•);
     	lan4.setLayout(new BorderLayout(10,10));
     	JPanel op2=new JPanel();
     	JLabel op3=new JLabel("                 ");
-    	op3.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 24));
+    	op3.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 24));
     	op2.add(op3);
     	lan4.add(op2,BorderLayout.NORTH);
     	lan4.add(la3,BorderLayout.CENTER);
     	
     	lan5.setLayout(new BorderLayout(5,5));
-    	²éÑ¯±¨Ëğ.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 17));
-    	²éÑ¯Î¬ĞŞ.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 17));
+    	æŸ¥è¯¢æŠ¥æŸ.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 17));
+    	æŸ¥è¯¢ç»´ä¿®.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 17));
     	JPanel x1=new JPanel();
     	JPanel x2=new JPanel();
     	JPanel x3=new JPanel();
     	x1.setLayout(new GridLayout(1,2));
-    	x1.add(²éÑ¯±¨Ëğ);
-    	x1.add(²éÑ¯Î¬ĞŞ);
+    	x1.add(æŸ¥è¯¢æŠ¥æŸ);
+    	x1.add(æŸ¥è¯¢ç»´ä¿®);
     	x3.add(js3);
-    	JLabel k=new JLabel("±¨ËğÓëÎ¬ĞŞ±í");
-    	k.setFont(new Font("¿¬Ìå", Font.PLAIN, 20));
+    	JLabel k=new JLabel("æŠ¥æŸä¸ç»´ä¿®è¡¨");
+    	k.setFont(new Font("æ¥·ä½“", Font.PLAIN, 20));
     	k.setForeground(Color.RED);
     	x2.add(k);
-    	area3.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 16));
+    	area3.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 16));
     	lan5.add(x1,BorderLayout.SOUTH);
     	lan5.add(x3, BorderLayout.CENTER);
     	lan5.add(x2, BorderLayout.NORTH);
@@ -313,12 +313,12 @@ public class Ö÷½çÃæ  extends JFrame{
     				card.show(centerPanel, "5");	
     			}
         });
-       	Ìí¼Ó.addActionListener(new ActionListener(){
+       	æ·»åŠ .addActionListener(new ActionListener(){
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					new Ìí¼ÓÉè±¸½çÃæ(con);
+					new æ·»åŠ è®¾å¤‡ç•Œé¢(con);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -327,7 +327,7 @@ public class Ö÷½çÃæ  extends JFrame{
 			}
        		
        	});
-       	²éÑ¯.addActionListener(new ActionListener(){
+       	æŸ¥è¯¢.addActionListener(new ActionListener(){
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -340,7 +340,7 @@ public class Ö÷½çÃæ  extends JFrame{
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				²éÑ¯.doClick();
+				æŸ¥è¯¢.doClick();
 				
 			}
        		
@@ -349,7 +349,7 @@ public class Ö÷½çÃæ  extends JFrame{
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				²éÑ¯.doClick();
+				æŸ¥è¯¢.doClick();
 				
 			}
        		
@@ -358,12 +358,12 @@ public class Ö÷½çÃæ  extends JFrame{
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				²éÑ¯.doClick();
+				æŸ¥è¯¢.doClick();
 				
 			}
        		
        	});
-       	ÀàĞÍ²éÑ¯.addActionListener(new ActionListener(){
+       	ç±»å‹æŸ¥è¯¢.addActionListener(new ActionListener(){
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -371,7 +371,7 @@ public class Ö÷½çÃæ  extends JFrame{
 				
 			}
        	});
-      	ÀàĞÍÌí¼Ó.addActionListener(new ActionListener(){
+      	ç±»å‹æ·»åŠ .addActionListener(new ActionListener(){
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -387,18 +387,18 @@ public class Ö÷½çÃæ  extends JFrame{
 			}
         	
         });
-        ±¨Ëğ¼ÇÂ¼.addActionListener(new ActionListener(){
+        æŠ¥æŸè®°å½•.addActionListener(new ActionListener(){
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				 try {
-					PreparedStatement pstmt = con.prepareStatement("exec ±¨Ëğ¼ÇÂ¼Ìá½»   ?,?,?");
+					PreparedStatement pstmt = con.prepareStatement("exec æŠ¥æŸè®°å½•æäº¤   ?,?,?");
 					pstmt.setString(1,text7.getText());
 					pstmt.setString(3, text8.getText());
 					pstmt.setDate(2, java.sql.Date.valueOf(text9.getText()));
 					ResultSet res =pstmt.executeQuery();
 					pstmt.close();
-				    JOptionPane.showMessageDialog(text8, "Ìá½»³É¹¦!","ÌáÊ¾",JOptionPane.WARNING_MESSAGE);
+				    JOptionPane.showMessageDialog(text8, "æäº¤æˆåŠŸ!","æç¤º",JOptionPane.WARNING_MESSAGE);
 				} catch (SQLException e1) {
 					//e1.printStackTrace();
 				}
@@ -406,17 +406,17 @@ public class Ö÷½çÃæ  extends JFrame{
 			}
         	
         });
-        Î¬ĞŞ¼ÇÂ¼.addActionListener(new ActionListener(){
+        ç»´ä¿®è®°å½•.addActionListener(new ActionListener(){
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 			 try {
-					PreparedStatement pstmt = con.prepareStatement("exec Î¬ĞŞ¼ÇÂ¼Ìá½»   ?,?,?");
+					PreparedStatement pstmt = con.prepareStatement("exec ç»´ä¿®è®°å½•æäº¤   ?,?,?");
 					pstmt.setString(1,text10.getText());
 					pstmt.setString(3, text11.getText());
 					pstmt.setDate(2, java.sql.Date.valueOf(text12.getText()));
 					rs=pstmt.executeQuery();
-					JOptionPane.showMessageDialog(text11, "Ìá½»³É¹¦!","ÌáÊ¾",JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showMessageDialog(text11, "æäº¤æˆåŠŸ!","æç¤º",JOptionPane.WARNING_MESSAGE);
 				} catch (SQLException e1) {
 					//e1.printStackTrace();
 				}
@@ -424,15 +424,15 @@ public class Ö÷½çÃæ  extends JFrame{
 			}
         	
         });
-        ²éÑ¯±¨Ëğ.addActionListener(new ActionListener(){
+        æŸ¥è¯¢æŠ¥æŸ.addActionListener(new ActionListener(){
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				  try {
-					String output="Éè±¸±àºÅ"+"\t"+"±¨ËğÈÕÆÚ"+"\t"+"¸ºÔğÈË"+"\n";
+					String output="è®¾å¤‡ç¼–å·"+"\t"+"æŠ¥æŸæ—¥æœŸ"+"\t"+"è´Ÿè´£äºº"+"\n";
 					 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 					aql=con.createStatement();
-					 rs=aql.executeQuery("select * from Éè±¸±¨Ëğ±í");
+					 rs=aql.executeQuery("select * from è®¾å¤‡æŠ¥æŸè¡¨");
 				      while(rs.next()){
 				    	  String id=rs.getString(1);
 				    	  String date=sdf.format(rs.getDate(2));
@@ -446,15 +446,15 @@ public class Ö÷½çÃæ  extends JFrame{
 				}
 			}	
         });
-        ²éÑ¯Î¬ĞŞ.addActionListener(new ActionListener(){
+        æŸ¥è¯¢ç»´ä¿®.addActionListener(new ActionListener(){
 
  			@Override
  			public void actionPerformed(ActionEvent e) {
  				  try {
- 					String output="Éè±¸±àºÅ"+"\t"+"Î¬ĞŞÈÕÆÚ"+"\t"+"Î¬ĞŞÈË"+"\n";
+ 					String output="è®¾å¤‡ç¼–å·"+"\t"+"ç»´ä¿®æ—¥æœŸ"+"\t"+"ç»´ä¿®äºº"+"\n";
  					 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
  					aql=con.createStatement();
- 					 rs=aql.executeQuery("select * from Éè±¸Î¬ĞŞ±í");
+ 					 rs=aql.executeQuery("select * from è®¾å¤‡ç»´ä¿®è¡¨");
  				      while(rs.next()){
  				    	  String id=rs.getString(1);
  				    	  String date=sdf.format(rs.getDate(2));
@@ -489,7 +489,7 @@ public class Ö÷½çÃæ  extends JFrame{
 
    	  try{
    		  
-   		  PreparedStatement pstmt = con.prepareStatement("select * from Éè±¸Ì¨ÕË±í  where Éè±¸±àºÅ=? or Éè±¸Ãû³Æ=? or Éè±¸ÀàĞÍ=?");
+   		  PreparedStatement pstmt = con.prepareStatement("select * from è®¾å¤‡å°è´¦è¡¨  where è®¾å¤‡ç¼–å·=? or è®¾å¤‡åç§°=? or è®¾å¤‡ç±»å‹=?");
    		  if(!str1.equals("")){
    		  pstmt.setString(1,str1);
    		  pstmt.setString(2, null);
@@ -515,7 +515,7 @@ public class Ö÷½çÃæ  extends JFrame{
    		  String id;
    		  String name;
    		  String type,baosun,danjia,changjia,date,peo;
-   		  String output="Éè±¸±àºÅ"+"\t"+"Éè±¸Ãû³Æ"+"\t"+"Éè±¸ÀàĞÍ"+"\t"+"ÊÇ·ñ±¨Ëğ"+"\t"+"µ¥¼Û"+"\t"+"Éú²ú³§¼Ò"+"\t"+"¹ºÂòÈÕÆÚ"+"\t"+"¹ºÂòÈË"+"\n";
+   		  String output="è®¾å¤‡ç¼–å·"+"\t"+"è®¾å¤‡åç§°"+"\t"+"è®¾å¤‡ç±»å‹"+"\t"+"æ˜¯å¦æŠ¥æŸ"+"\t"+"å•ä»·"+"\t"+"ç”Ÿäº§å‚å®¶"+"\t"+"è´­ä¹°æ—¥æœŸ"+"\t"+"è´­ä¹°äºº"+"\n";
    		  SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
    	     
    		  if(rs.next()){
@@ -538,7 +538,7 @@ public class Ö÷½çÃæ  extends JFrame{
    		 }while(rs.next());
    		 }
    		 else{
-   			 area.setText("\n"+"²»´æÔÚµ±Ç°Éè±¸");
+   			 area.setText("\n"+"ä¸å­˜åœ¨å½“å‰è®¾å¤‡");
    		 }
 //   		  con.close();
    	  }catch(SQLException e){
@@ -552,8 +552,8 @@ public class Ö÷½çÃæ  extends JFrame{
     	t1.setText("");
     	t2.setText("");
     	 try {
-			PreparedStatement pstmt = con.prepareStatement("select * from ÀàĞÍÊÓÍ¼  where Éè±¸ÀàĞÍ=?;");
-			PreparedStatement pstmt1 = con.prepareStatement("select * from Éè±¸ÀàĞÍ±í  where Éè±¸ÀàĞÍ=?;");
+			PreparedStatement pstmt = con.prepareStatement("select * from ç±»å‹è§†å›¾  where è®¾å¤‡ç±»å‹=?;");
+			PreparedStatement pstmt1 = con.prepareStatement("select * from è®¾å¤‡ç±»å‹è¡¨  where è®¾å¤‡ç±»å‹=?;");
 			if(str1!=null){
 			pstmt.setString(1, str1);
 			pstmt1.setString(1, str1);
@@ -577,13 +577,13 @@ public class Ö÷½çÃæ  extends JFrame{
     	t1.setText("");
     	t2.setText("");
     	try {
-			PreparedStatement pstmt = con.prepareStatement("insert into Éè±¸ÀàĞÍ±í(Éè±¸ÀàĞÍ,¹ÜÀíÈË,ÀàĞÍËµÃ÷)  values(?,?,?)");
+			PreparedStatement pstmt = con.prepareStatement("insert into è®¾å¤‡ç±»å‹è¡¨(è®¾å¤‡ç±»å‹,ç®¡ç†äºº,ç±»å‹è¯´æ˜)  values(?,?,?)");
 			pstmt.setString(1,text4.getText());
 			pstmt.setString(2, text5.getText());
 			pstmt.setString(3, area2.getText());
 			ResultSet res =pstmt.executeQuery();
 			pstmt.close();
-			JOptionPane.showMessageDialog(text5, "Ìí¼Ó³É¹¦!","ÌáÊ¾",JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(text5, "æ·»åŠ æˆåŠŸ!","æç¤º",JOptionPane.WARNING_MESSAGE);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			

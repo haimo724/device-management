@@ -1,4 +1,4 @@
-package Éè±¸¹ÜÀí;
+package è®¾å¤‡ç®¡ç†;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -14,20 +14,20 @@ import java.util.Date;
 
 import javax.swing.*;
 
-public class Ìí¼ÓÉè±¸½çÃæ extends JFrame {
+public class æ·»åŠ è®¾å¤‡ç•Œé¢ extends JFrame {
     Connection con;
 	Statement aql;
 	ResultSet rs;
 	JComboBox<String>comBox,comBox1;
 	Box basebox,box1,box2;
-	JLabel label1=new JLabel("Éè±¸±àºÅ£º");
-	JLabel label2=new JLabel("Éè±¸Ãû³Æ£º");
-	JLabel label3=new JLabel("Éè±¸ÀàĞÍ£º");
-	JLabel label4=new JLabel("ÊÇ·ñ±¨Ëğ£º");
-	JLabel label5=new JLabel("    µ¥¼Û£º");
-	JLabel label6=new JLabel("Éú²ú²ú¼Ò£º");
-	JLabel label7=new JLabel("¹ºÂòÈÕÆÚ£º");
-	JLabel label8=new JLabel("  ¹ºÂòÈË£º");
+	JLabel label1=new JLabel("è®¾å¤‡ç¼–å·ï¼š");
+	JLabel label2=new JLabel("è®¾å¤‡åç§°ï¼š");
+	JLabel label3=new JLabel("è®¾å¤‡ç±»å‹ï¼š");
+	JLabel label4=new JLabel("æ˜¯å¦æŠ¥æŸï¼š");
+	JLabel label5=new JLabel("    å•ä»·ï¼š");
+	JLabel label6=new JLabel("ç”Ÿäº§äº§å®¶ï¼š");
+	JLabel label7=new JLabel("è´­ä¹°æ—¥æœŸï¼š");
+	JLabel label8=new JLabel("  è´­ä¹°äººï¼š");
 	JTextField text1=new JTextField(13);
 	JTextField text2=new JTextField(10);
 	JTextField text3=new JTextField(10);
@@ -36,18 +36,18 @@ public class Ìí¼ÓÉè±¸½çÃæ extends JFrame {
 	JTextField text6=new JTextField(10);
 	JTextField text7=new JTextField(10);
 	JTextField text8=new JTextField(10);
-    JButton button=new JButton("Ìá½»Éè±¸");
-    Font f=new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 19);
-    Font f1=new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 16);
-    Font f2=new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 16);
+    JButton button=new JButton("æäº¤è®¾å¤‡");
+    Font f=new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 19);
+    Font f1=new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 16);
+    Font f2=new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 16);
     JPanel jp=new JPanel();
-  public Ìí¼ÓÉè±¸½çÃæ( Connection con) throws SQLException{
+  public æ·»åŠ è®¾å¤‡ç•Œé¢( Connection con) throws SQLException{
 	  this.con=con;
 	  init();
 	  setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
   }
   public void init() throws SQLException{
-	  this.setTitle("Ìí¼ÓÉè±¸");
+	  this.setTitle("æ·»åŠ è®¾å¤‡");
 	  this.setLayout(new java.awt.FlowLayout());
   	  this.setBounds(500, 215, 360, 415);
   	  label1.setFont(f);
@@ -73,7 +73,7 @@ public class Ìí¼ÓÉè±¸½çÃæ extends JFrame {
 	 comBox.getEditor().getItem();
 	 comBox.setFont(f1);
 	 aql=con.createStatement();
-		rs=aql.executeQuery("select Éè±¸ÀàĞÍ  from  Éè±¸ÀàĞÍ±í");
+		rs=aql.executeQuery("select è®¾å¤‡ç±»å‹  from  è®¾å¤‡ç±»å‹è¡¨");
 		while(rs.next()){
 			comBox.addItem(rs.getString(1));
 	  }
@@ -131,22 +131,22 @@ public class Ìí¼ÓÉè±¸½çÃæ extends JFrame {
   	 this.setResizable(false);
   	 text1.setText("");
   	 text7.setText("");
-  	 text4.setText("·ñ");
+  	 text4.setText("å¦");
   	 text4.setEnabled(false);
 	 button.addActionListener(new ActionListener(){
 		public void actionPerformed(ActionEvent e) {
 			if(text1.getText().equals(""))
 			{
-				JOptionPane.showMessageDialog(text1, "ÊäÈë²»ÄÜÎª¿Õ£¬ÇëÖØĞÂÊäÈë!","ÌáÊ¾",JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(text1, "è¾“å…¥ä¸èƒ½ä¸ºç©ºï¼Œè¯·é‡æ–°è¾“å…¥!","æç¤º",JOptionPane.WARNING_MESSAGE);
 			}
 			else{
 			  try {
 				aql=con.createStatement();
-				PreparedStatement pst = con.prepareStatement("insert into Éè±¸Ì¨ÕË±í   values(?,?,?,?,?,?,?,?)");
+				PreparedStatement pst = con.prepareStatement("insert into è®¾å¤‡å°è´¦è¡¨   values(?,?,?,?,?,?,?,?)");
 				pst.setString(1, text1.getText());
 				pst.setString(2,text2.getText());
 				pst.setString(3,comBox.getSelectedItem().toString());
-				pst.setString(4, "·ñ");
+				pst.setString(4, "å¦");
 				pst.setFloat(5, Float.parseFloat(text5.getText()));
 				pst.setString(6, text6.getText());
 				if(text7.getText().equals("")){

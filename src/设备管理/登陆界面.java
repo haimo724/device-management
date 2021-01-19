@@ -1,4 +1,4 @@
-package Éè±¸¹ÜÀí;
+package è®¾å¤‡ç®¡ç†;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -13,14 +13,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.swing.*;
-public class µÇÂ½½çÃæ  extends JFrame{
+public class ç™»é™†ç•Œé¢  extends JFrame{
 	JTextField text1;
 	JPasswordField text2;
 	JButton button1,button2;
 	char a[];
 	String s;
 	int i=0;
-	public µÇÂ½½çÃæ() {
+	public ç™»é™†ç•Œé¢() {
 		init();
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -28,17 +28,17 @@ public class µÇÂ½½çÃæ  extends JFrame{
 	void init(){
 		this.setBounds(500,200,400,280);
 		this.setResizable(false);
-		Font font = new Font("ËÎÌå",Font.BOLD,19);
-		Font font1 = new Font("¿¬Ìå",Font.BOLD,26);
+		Font font = new Font("å®‹ä½“",Font.BOLD,19);
+		Font font1 = new Font("æ¥·ä½“",Font.BOLD,26);
 		setLayout(new FlowLayout());
-		JLabel b=new JLabel("             ÊµÑéÖĞĞÄÉè±¸¹ÜÀíÏµÍ³            ");
+		JLabel b=new JLabel("             å®éªŒä¸­å¿ƒè®¾å¤‡ç®¡ç†ç³»ç»Ÿ            ");
 	    b.setForeground(Color.RED);
 		b.setFont(font1);
 		this.add(b);
 		JLabel b7=new JLabel("                                ");
 		b7.setFont(font);
 		this.add(b7);
-		JLabel b1=new JLabel("ÓÃ»§Ãû:");
+		JLabel b1=new JLabel("ç”¨æˆ·å:");
 		b1.setFont(font);
 		this.add(b1);
 		text1=new JTextField(26);
@@ -47,7 +47,7 @@ public class µÇÂ½½çÃæ  extends JFrame{
 		JLabel b6=new JLabel("                                ");
 		b6.setFont(font);
 		this.add(b6);
-		JLabel b2=new JLabel("ÃÜ  Âë:");
+		JLabel b2=new JLabel("å¯†  ç :");
 		b2.setFont(font);
 		this.add(b2);
 		text2=new JPasswordField(26);
@@ -56,11 +56,11 @@ public class µÇÂ½½çÃæ  extends JFrame{
 		JLabel b5=new JLabel("                                ");
 		b5.setFont(font);
 		this.add(b5);
-		button1=new JButton("  µÇ Â½  ");
+		button1=new JButton("  ç™» é™†  ");
 		button1.setFont(font);
 		//button1.setIcon(new ImageIcon(""));
 		add(button1);
-		button2=new JButton("  ÍË ³ö   ");
+		button2=new JButton("  é€€ å‡º   ");
 		button2.setFont(font);
 		add(button2);
 		text2.addActionListener(new ActionListener(){
@@ -89,23 +89,23 @@ public class µÇÂ½½çÃæ  extends JFrame{
 				  Statement aql;
 				  ResultSet rs;
 				  try{
-					  con=DriverManager.getConnection("jdbc:sqlserver://172.19.158.47:1433;databaseName=Éè±¸¹ÜÀíÏµÍ³;"
+					  con=DriverManager.getConnection("jdbc:sqlserver://172.19.158.47:1433;databaseName=è®¾å¤‡ç®¡ç†ç³»ç»Ÿ;"
 					  		+ "user=Lily;password=000000");
 					  aql=con.createStatement();
-					  PreparedStatement pstmt = con.prepareStatement("select * from lode where ÓÃ»§Ãû=?;");
+					  PreparedStatement pstmt = con.prepareStatement("select * from lode where ç”¨æˆ·å=?;");
 					  pstmt.setString(1, text1.getText());
 					  rs=pstmt.executeQuery();
                       if((!rs.next())||rs.getString(2)==null){
-                    	  JOptionPane.showMessageDialog(text1, "¸ÃÓÃ»§²»´æÔÚ£¬ÇëÖØĞÂÊäÈë!","ÌáÊ¾",JOptionPane.WARNING_MESSAGE);
+                    	  JOptionPane.showMessageDialog(text1, "è¯¥ç”¨æˆ·ä¸å­˜åœ¨ï¼Œè¯·é‡æ–°è¾“å…¥!","æç¤º",JOptionPane.WARNING_MESSAGE);
                       }
                       else{
                     	  if(!rs.getString(2).equals(String.valueOf(text2.getPassword()))){
                     		  
-                    		  JOptionPane.showMessageDialog(text1, "ÓÃ»§Ãû»òÃÜÂëÓĞÎó£¬ÇëÖØĞÂÊäÈë!","ÌáÊ¾",JOptionPane.WARNING_MESSAGE);
+                    		  JOptionPane.showMessageDialog(text1, "ç”¨æˆ·åæˆ–å¯†ç æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥!","æç¤º",JOptionPane.WARNING_MESSAGE);
                     	  }
                     	  else{
                     		  dispose();
-                    		  new Ö÷½çÃæ();
+                    		  new ä¸»ç•Œé¢();
                     	  }
                       }
 					  con.close();
